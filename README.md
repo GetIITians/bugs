@@ -1,2 +1,3 @@
-# bugs
-This is buggy code of getiitians
+# teaching
+This is BASAD free code of getIITians
+

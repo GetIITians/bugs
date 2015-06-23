@@ -1,0 +1,53 @@
+body {
+  background-image: url('../images/background.png');
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+#index-banner {
+  height: 400px;
+  min-height: 325px;
+}
+.parallax-container {
+  height: 350px;
+  min-height: 350px;
+}
+
+.slider-container {
+}
+
+.bxslider 1{
+}
+
+input#main-search-bar {
+  background: #eeeeee;
+  border:1px solid teal;
+  border-radius: 10px;
+
+  font-size: 20px;
+  color: teal;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+input#main-search-bar:focus {
+  background: #ffffff;
+  border:1px solid #00897b;
+}
+
+.tabs .tab a {
+  color: #43a047;
+}
+
+.tabs .tab a:hover {
+  color: #00c853;
+}
+
+.tabs .indicator {
+  background-color: #43a047;
+}
