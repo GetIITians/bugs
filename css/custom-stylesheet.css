@@ -9,10 +9,6 @@ main {
   flex: 1 0 auto;
 }
 
-#index-banner {
-  height: 400px;
-  min-height: 325px;
-}
 .parallax-container {
   height: 350px;
   min-height: 350px;
@@ -50,4 +46,8 @@ input#main-search-bar:focus {
 
 .tabs .indicator {
   background-color: #43a047;
+}
+
+.footer-link {
+  color: #eeeeee;
 }

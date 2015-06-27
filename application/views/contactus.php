@@ -8,7 +8,7 @@ load_view("Template/navbarnew.php");
 	<br>
 	  <div class="row">
 	  	<div class="col s12 l6">
-	  		<div class="card-panel">
+	  		<div class="card-panel" style="height:520px;">
 	  		  <div class="row">
             <div class="col s12">
               <h3 class="teal-text text-darken-1 center">Contact Us</h3>
@@ -45,33 +45,39 @@ load_view("Template/navbarnew.php");
 	  		</div>
 	  	</div>
 	  	<div class="col s12 l6">
-        <div class="card-panel">
+        <div class="card-panel" style="height:520px;">
 	    		<div class="row">
 		    		<?php
 					    if(!empty($msg)) {
-					      echo $msg;
-					    }
+            ?>
+            <div class="col s12">
+					    <div class="light-blue card-panel">
+                <h6 class="white-text"><?php echo $msg;?></h6>
+              </div>
+            </div>
+					  <?php
+              }
 					    else {
 					  ?>
-	    		  <form class="col s12">
+	    		  <form id="contact-form" class="col s12" method="post">
 	    		  	<div class="row">
 	    		  	  <div class="col s12">
-	    		  	  	<h5 class="teal-text">Send us a message</h5>
+	    		  	  	<h5 class="teal-text">How can we help you?</h5><br>
 	    		  	  </div>
 	    		  	  <div class="input-field col s12">
-	    		  	  	<input id="name" type="text" class="validate" required>
+	    		  	  	<input id="name" name="name" type="text" class="validate" required>
 	    		  	  	<label for="name">Name</label>
 	    		  	  </div>
 	    		  	  <div class="input-field col s12">
-	    		  	  	<input id="email" type="email" class="validate" required>
+	    		  	  	<input id="email" name="email" type="email" class="validate" required>
 	    		  	  	<label for="email">Email</label>
 	    		  	  </div>
 	    		  	  <div class="input-field col s12">
-	    		  	  	<input id="phone_number" type="text" class="validate" required>
+	    		  	  	<input id="phone_number" name="phone" type="text" class="validate" required>
 	    		  	  	<label for="phone_number">Phone Number</label>
 	    		  	  </div>
 	    		  	  <div class="input-field col s12">
-	    		  	  	<textarea id="message" class="materialize-textarea" required></textarea>
+	    		  	  	<textarea id="message" name="msg" class="materialize-textarea" required></textarea>
           				<label for="message">Your Message</label>
 	    		  	  </div>
 	    		  	  <div class="col s12">
@@ -99,7 +105,7 @@ load_view("Template/navbarnew.php");
 </main>
 
 <?php
-load_view("Template/footernew.php");
+load_view("Template/footer.php");
 load_view("Template/bottom.php",Fun::mergeifunset($inp,array("needbody"=>false)));
 ?>
   <script src="https://maps.googleapis.com/maps/api/js"></script>
